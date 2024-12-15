@@ -1,3 +1,8 @@
+
+
+
+
+
 <nav class="bg-white">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between ">
@@ -30,13 +35,15 @@
         </div>
         <div class="hidden sm:ml-14 sm:flex h-full w-full">
           <div class="flex w-full h-full items-center justify-items-center space-x-4">
-            <a href="#" class="flex items-center h-full px-3 font-medium text-gray-800 border-blue-500 border-b-4" aria-current="page">Inicio</a>
+            <a id="InicioBtn" href="/" class="flex items-center h-full px-3 font-medium text-gray-500 border-b-4 border-white hover:text-gray-800 hover:border-blue-500 hover:border-b-4" aria-current="page">Inicio</a>
             <a href="#" class="flex items-center h-full px-3 font-medium text-gray-500 border-b-4 border-white hover:text-gray-800 hover:border-blue-500 hover:border-b-4">Productos</a>
             <a href="#" class="flex items-center h-full px-3 font-medium text-gray-500 border-b-4 border-white hover:text-gray-800 hover:border-blue-500 hover:border-b-4">Contacto</a>
           </div>
         </div>
         <div class="hidden sm:flex ">
-          <button class="flex w-max items-center rounded-lg bg-blue-500  px-4 py-2 font-medium text-white">Log In</button>
+
+
+          <a class="flex w-max items-center rounded-lg bg-blue-500  px-4 py-2 font-medium text-white" href="/Login">Log In</a>
         </div>
       </div>
     </div>
@@ -53,3 +60,17 @@
 </nav>
 
 
+<script> const currentRoute = window.location.pathname;
+
+  const InicioBtn = document.querySelector("#InicioBtn")
+  
+  const activeClass = ["text-gray-800","!border-blue-500","border-b-4", ] 
+  
+  switch (currentRoute) {
+    case "/":
+      InicioBtn?.classList.add(...activeClass );
+      break;
+  
+    default:
+      break;
+  }</script>
