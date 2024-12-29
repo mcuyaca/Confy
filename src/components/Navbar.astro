@@ -53,7 +53,7 @@
 
   const InicioBtn = document.querySelector("#InicioBtn")
   
-  const activeClass = ["text-gray-800","!border-blue-500","border-b-4", ] 
+  const activeClass = ["text-gray-800","!border-blue-500","border-b-4" ] 
   
   switch (currentRoute) {
     case "/":
@@ -69,13 +69,12 @@
   
 let activeMenu = false;
 
-let hamburgerMenu = document.querySelector('#mobile-menu') as HTMLDivElement;
+let mobileMenu = document.querySelector('#mobile-menu') as HTMLDivElement;
 let mobileBtn = document.querySelector('#mobileBtn') as HTMLButtonElement;
 
 
 mobileBtn.addEventListener( "click", ()=> {
-  activeMenu =!activeMenu;
-  !activeMenu ? hamburgerMenu.style.display = "none"  : hamburgerMenu.style.display = "block" ;
+  mobileMenu.classList.toggle("hidden");
   console.log(activeMenu)
 })
 
